@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Proyecto</title>
+  <title>PodcastFm</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% if alert %>
+	<p class="alert"><%= alert %></p>
+<% elsif notice %>
+	<p class="notice"><%= notice %></p>
+<% end %>
+
+<% unless current_page?(root_path) %>
+	<%= render 'layouts/header'; %>
+<% end %>
 
 <%= yield %>
 
