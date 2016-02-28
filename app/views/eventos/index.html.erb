@@ -8,7 +8,7 @@
 			<% @eventos.each do |evento| %>
 				<%= link_to evento do %>
 					<li>
-						<%= image_tag podcast.thumbnail.url(:medium) %>
+						<%= image_tag evento.thumbnail.url(:medium) %>
 						<div class="podcast_overview">
 							<h2><%= evento.title %></h2>
 							<p class="episode_count">1 Episode</p>

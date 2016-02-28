@@ -26,11 +26,11 @@
 	<div id="episodes">
 		<div class="wrapper_skinny">
 			<ul class="cf">
-				<% @episodes.each do |episode| %>
+				<% @invitados.each do |invitado| %>
 					<li class="cf">
 						<div class="episode_thumbnail">
 							<a href="#">
-								<%= image_tag episode.episode_thumbnail.url(:medium) %>
+								<%= image_tag invitado.invitado_thumbnail.url(:medium) %>
 							</a>
 						</div>
 						<div class="episode_overview">
@@ -41,7 +41,7 @@
 				<% end %>
 			</ul>
 
-			<%= will_paginate @episodes, previous_label: "Previous", next_label: "Next" %>
+			<%= will_paginate @invitados, previous_label: "Previous", next_label: "Next" %>
 		</div>
 	</div>
 </div>
