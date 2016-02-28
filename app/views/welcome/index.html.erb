@@ -5,12 +5,12 @@
       <nav>
         <ul>
           <% unless evento_signed_in? %>
-            <li><%= link_to "Explore", podcasts_path %></li>
+            <li><%= link_to "Explore", eventos_path %></li>
             <li><%= link_to "Sign In", new_evento_session_path %></li>
             <li><%= link_to "Create a Podcast", new_evento_registration_path %></li>
           <% else %>
             <li><a href="#">Dashboard</a></li>
-            <li><%= link_to "Explore", podcasts_path %></li>
+            <li><%= link_to "Explore", eventos_path %></li>
             <li><%= link_to "Sign Out", destroy_evento_session_path, method: :delete %></li>
           <% end %>
         </ul>
@@ -20,6 +20,6 @@
   <div class="wrapper_skinny">
     <h1>Discover your new favorite <span class="responsive_break">podcast, or create your own.</span></h1>
     <%= link_to "Create a Podcast", new_evento_registration_path, class: "button button_highlight" %>
-    <%= link_to "Explore", podcasts_path, class: "button button_white" %>
+    <%= link_to "Explore", eventos_path, class: "button button_white" %>
   </div>
 </div>

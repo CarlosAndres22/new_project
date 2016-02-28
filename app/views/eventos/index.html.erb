@@ -1,0 +1,23 @@
+<div id="banner" class="podcasts_banner">
+	<h1>Discover your new favorite podcast</h1>
+</div>
+
+<div id="podcasts" class="cf">
+	<div class="wrapper">
+		<ul class="cf">
+			<% @eventos.each do |evento| %>
+				<%= link_to evento do %>
+					<li>
+						<%= image_tag podcast.thumbnail.url(:medium) %>
+						<div class="podcast_overview">
+							<h2><%= evento.title %></h2>
+							<p class="episode_count">1 Episode</p>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+		</ul>
+
+		<%= will_paginate @podcasts, previous_label: "Previous", next_label: "Next" %>
+	</div>
+</div>

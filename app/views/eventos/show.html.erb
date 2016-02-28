@@ -1,0 +1,47 @@
+<div id="podcast_show">
+	<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @evento.title %></h1>
+			<p class="description"><%= @evento.description %></p>
+			<% unless @evento.itunes.blank? %>
+				<a href="<%= @evento.itunes %>" class="subscribe_link">iTunes</a>
+			<% end %>
+			<% unless @evento.stitcher.blank? %>
+				<a href="<%= @evento.stitcher %>" class="subscribe_link">Stitcher</a>
+			<% end %>
+			<% unless @evento.podbay.blank? %>
+				<a href="<%= @evento.podbay %>" class="subscribe_link">PodBay</a>
+			<% end %>
+		</div>
+	</div>
+
+	<div id="breadcrumb">
+		<%= link_to eventos_path do %>
+			All Podcasts
+			<span>/</span>
+			<%= @evento.title %>
+		<% end %>
+	</div>
+
+	<div id="episodes">
+		<div class="wrapper_skinny">
+			<ul class="cf">
+				<% @episodes.each do |episode| %>
+					<li class="cf">
+						<div class="episode_thumbnail">
+							<a href="#">
+								<%= image_tag episode.episode_thumbnail.url(:medium) %>
+							</a>
+						</div>
+						<div class="episode_overview">
+							<h2><%= link_to invitado.title, evento_invitado_path(@evento, invitado) %></h2>
+							<p class="description"><%= truncate(invitado.description, length: 160) %></p>
+						</div>
+					</li>
+				<% end %>
+			</ul>
+
+			<%= will_paginate @episodes, previous_label: "Previous", next_label: "Next" %>
+		</div>
+	</div>
+</div>
