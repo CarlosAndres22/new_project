@@ -6,6 +6,6 @@ class Evento < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          has_many :invitados
 
-         has_attached_file :thumbnail, :styles => { :large => "1000x1000#", :medium => "550x550#" }
+         has_attached_file :thumbnail, :styles => { :large => "1000x1000#", :medium => "950x950#" }
   validates_attachment_content_type :thumbnail, :content_type => /\Aimage\/.*\Z/
 end

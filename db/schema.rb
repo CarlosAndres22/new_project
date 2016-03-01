@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160228214312) do
+ActiveRecord::Schema.define(version: 20160229023127) do
 
   create_table "eventos", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20160228214312) do
     t.datetime "updated_at"
     t.string   "title"
     t.text     "description"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "eventos", ["email"], name: "index_eventos_on_email", unique: true

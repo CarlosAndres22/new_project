@@ -1,13 +1,17 @@
 <div id="background">
   <header class="cf">
     <div class="wrapper_wide">
-      <%= link_to "Podcast.fm", root_path, id: "logo" %>
+      <%= link_to "   Gallery", "https://galeria-andres.herokuapp.com/", :target => "_blank", id:"logo2"  %>
+     
+      <%= link_to "FunEvenful  ", root_path, id: "logo" %>
+   
+
       <nav>
         <ul>
           <% unless evento_signed_in? %>
-            <li><%= link_to "Explore", eventos_path %></li>
+            <li><%= link_to "Conoce", eventos_path %></li>
             <li><%= link_to "Sign In", new_evento_session_path %></li>
-            <li><%= link_to "Create a Podcast", new_evento_registration_path %></li>
+            <li><%= link_to "Create an event", new_evento_registration_path %></li>
           <% else %>
             <li><a href="#">Dashboard</a></li>
             <li><%= link_to "Explore", eventos_path %></li>
@@ -18,8 +22,8 @@
     </div>
   </header>
   <div class="wrapper_skinny">
-    <h1>Discover your new favorite <span class="responsive_break">podcast, or create your own.</span></h1>
-    <%= link_to "Create a Podcast", new_evento_registration_path, class: "button button_highlight" %>
+    <h1>Create a new event <span class="responsive_break">or lo de mas ss sss ssss .</span></h1>
+    <%= link_to "Create an event", new_evento_registration_path, class: "button button_highlight" %>
     <%= link_to "Explore", eventos_path, class: "button button_white" %>
   </div>
 </div>

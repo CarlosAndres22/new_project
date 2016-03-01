@@ -10,10 +10,10 @@
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li> <%= link_to "Episodes", root_path %> </li>
-        <li><%= link_to "New Episode", new_evento_invitado_path(@evento) %></li>
+        <li> <%= link_to "Invitado", root_path %> </li>
+        <li><%= link_to "New Invitado", new_evento_invitado_path(@evento) %></li>
         <li><%= link_to "Account Settings", edit_evento_registration_path %></li>
-        <li><%= link_to "View Podcast", evento_path(current_evento) %></li>
+        <li><%= link_to "View Evento", evento_path(current_evento) %></li>
       </ul>
     </div>
   </div>
@@ -25,7 +25,7 @@
           <li class="cf">
             <div class="episode_thumbnail">
               <a href="#">
-                <%= image_tag invitado.invitado_thumbnail.url(:medium) %>
+                <%= image_tag invitado.invitado_thumbnail.url(:large) %>
               </a>
             </div>
             <div class="episode_overview">

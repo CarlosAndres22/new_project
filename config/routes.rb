@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
+  get '/invitados/generate' => 'invitados#generate'
 end

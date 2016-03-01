@@ -1,17 +1,17 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1>The Rocketship Podcast Dashboard</h1>
+      <h1>Haz tus cambios</h1>
     </div>
   </div>
 
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><%= link_to "Episodes", root_path %> </li>
-        <li><%= link_to "New Episode", new_evento_invitado_path(@evento) %></li>
+        <li><%= link_to "Invitados", root_path %> </li>
+        <li><%= link_to "New Invitado", new_evento_invitado_path(@evento) %></li>
         <li><%= link_to "Account Settings", edit_evento_registration_path, class: "current" %></li>
-        <li><%= link_to "View Podcast", evento_path(current_evento) %></li>
+        <li><%= link_to "View Event", evento_path(current_evento) %></li>
       </ul>
     </div>
   </div>
@@ -48,20 +48,7 @@
 
       <h2>Links</h2>
 
-      <div class="field">
-        <%= f.label :itunes %><br />
-        <%= f.text_field :itunes %>
-      </div>
-
-      <div class="field">
-        <%= f.label :stitcher %><br />
-        <%= f.text_field :stitcher %>
-      </div>
-
-      <div class="field">
-        <%= f.label :podbay %><br />
-        <%= f.text_field :podbay %>
-      </div>
+      
 
       <div class="field">
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />

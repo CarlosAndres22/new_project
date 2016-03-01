@@ -11,8 +11,17 @@
       float: left;
       text-transform: uppercase;
       font-weight: 700;
+      margin-right: 25px;
       color: $white;
       text-decoration: none;
+    }
+    #logo2 {
+      float: left;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $white;
+      text-decoration: none;
+
     }
     nav {
       float: right;
@@ -25,6 +34,7 @@
           position: relative;
           a {
             color: $white;
+            font-size: 18px;
             text-decoration: none;
           }
         }

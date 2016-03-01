@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PodcastFm</title>
+  <title>Funevenful</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,9 +10,14 @@
 <body>
 
 <% if alert %>
-	<p class="alert"><%= alert %></p>
+<div id="notice_wrapper">
+	 <p class="alert"><%= alert %></p>
+</div>
+	
 <% elsif notice %>
-	<p class="notice"><%= notice %></p>
+	<div id="notice_wrapper">
+		<p class="notice"><%= notice %></p>
+	</div>
 <% end %>
 
 <% unless current_page?(root_path) %>
@@ -21,5 +26,17 @@
 
 <%= yield %>
 
+
+<script>
+	$(document).ready(function(){
+		setTimeout(function(){
+		$('#notice_wrapper').fadeOut("slow",function(){
+				$this.remove();
+			});
+		},4500);
+	});
+	
+
+</script>
 </body>
 </html>

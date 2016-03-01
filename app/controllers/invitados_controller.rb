@@ -1,7 +1,7 @@
 class InvitadosController < ApplicationController
 	before_action :authenticate_evento!, except: [:show]
-	before_filter :require_permission
-	before_action :find_evento
+	before_filter :require_permission, except: [:generate]
+	before_action :find_evento, except: [:generate]
 	before_action :find_invitado, only: [:show, :edit, :update, :destroy]
 
 	def new
@@ -18,7 +18,7 @@ class InvitadosController < ApplicationController
 	end
 
 	def show
-		@invitado = Invitado.where(evento_id: @evento).order("created_at DESC").limit(6).reject { |e| e.id == @invitado.id }
+		@invitados = Invitado.where(evento_id: @evento).order("created_at DESC").limit(6).reject { |e| e.id == @invitado.id }
 	end
 
 	def edit
@@ -36,6 +36,12 @@ class InvitadosController < ApplicationController
 		@invitado.destroy
 		redirect_to root_path
 	end
+
+	def generate
+		render :generate, layout: false
+	end
+
+
 
 	private
 
@@ -59,4 +65,4 @@ class InvitadosController < ApplicationController
 	end
 end
 
-end
+
