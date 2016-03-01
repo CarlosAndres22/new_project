@@ -46,7 +46,7 @@ class InvitadosController < ApplicationController
 	private
 
 	def invitado_params
-		params.require(:invitado).permit(:title, :description, :invitado_thumbnail)
+		params.require(:invitado).permit(:title, :description, :invitado_thumbnail,:avatar)
 	end
 
 	def find_evento

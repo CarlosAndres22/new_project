@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229023127) do
+ActiveRecord::Schema.define(version: 20160301230323) do
 
   create_table "eventos", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20160229023127) do
     t.string   "invitado_thumbnail_content_type"
     t.integer  "invitado_thumbnail_file_size"
     t.datetime "invitado_thumbnail_updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "invitados", ["evento_id"], name: "index_invitados_on_evento_id"

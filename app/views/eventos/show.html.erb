@@ -24,6 +24,7 @@
 							<a href="#">
 								<%= image_tag invitado.invitado_thumbnail.url(:medium) %>
 							</a>
+							<%= image_tag invitado.avatar.url(:medium) %>
 						</div>
 						<div class="episode_overview">
 							<h2><%= link_to invitado.title, evento_invitado_path(@evento, invitado) %></h2>

@@ -1,9 +1,10 @@
 <div id="background">
   <header class="cf">
     <div class="wrapper_wide">
+     <%= link_to "FunEvenful  ", root_path, id: "logo" %>
       <%= link_to "   Gallery", "https://galeria-andres.herokuapp.com/", :target => "_blank", id:"logo2"  %>
-     
-      <%= link_to "FunEvenful  ", root_path, id: "logo" %>
+
+      
    
 
       <nav>
@@ -23,6 +24,7 @@
   </header>
   <div class="wrapper_skinny">
     <h1>Create a new event <span class="responsive_break">or lo de mas ss sss ssss .</span></h1>
+    <br><br><br>
     <%= link_to "Create an event", new_evento_registration_path, class: "button button_highlight" %>
     <%= link_to "Explore", eventos_path, class: "button button_white" %>
   </div>
